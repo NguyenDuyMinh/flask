@@ -11,3 +11,6 @@
   ~/ export FLASK_ENV=development
   
   ~/ flask run
+  
+# Initialize the Database File
+  ~/ flask init-db
