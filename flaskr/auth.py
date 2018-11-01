@@ -38,7 +38,7 @@ def register():
 
     return render_template('auth/register.html')
 
-@bp.route('/login', methods=('GET', 'POST'))
+@bp.route('/loginging', methods=('GET', 'POST'))
 def login():
     if request.method == 'POST':
         username = request.form['username']
@@ -58,7 +58,7 @@ def login():
             session.clear()
             session['user_id'] = user['id']
             res = make_response("")
-            res.set_cookie(user['username'] , max_age=60*60*24*365)
+            res.set_cookie(user['username'] , max_age=0)
             return redirect(url_for('index'))
 
         flash(error)
