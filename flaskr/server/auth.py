@@ -1,7 +1,7 @@
 import functools
 
 from flask import (
-    Blueprint, flash, g, redirect, render_template, request, session, url_for
+    Blueprint, flash, g, redirect, render_template, request, session, url_for, make_response
 )
 from werkzeug.security import check_password_hash, generate_password_hash
 
@@ -57,6 +57,8 @@ def login():
         if error is None:
             session.clear()
             session['user_id'] = user['id']
+            res = make_response("")
+            res.set_cookie(user['username'] , max_age=60*60*24*365)
             return redirect(url_for('index'))
 
         flash(error)
