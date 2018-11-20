@@ -23,6 +23,11 @@ class Blogs(db.Model):
     title = db.Column(db.Text, nullable=False)
     body = db.Column(db.Text, nullable=False)
 
+    def __init__(self):
+        id = self.id
+        author_id = self.author_id
+        created = self.create
+
 
 
 
