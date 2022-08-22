@@ -83,4 +83,4 @@ xlrd==0.9.3
 gitpython==1.0.1
 gitdb==0.6.4
 smmap==0.8.5
-numpy==1.13.1
+numpy==1.22.0
