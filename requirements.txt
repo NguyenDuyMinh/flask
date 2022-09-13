@@ -34,7 +34,7 @@ decorator==3.4.0
 ecdsa==0.11
 fixture==1.4
 flake8==2.1.0
-flower==0.6.0
+flower==1.2.0
 fluent-logger==0.3.3
 gevent==1.2.2
 gevent-websocket==0.10.1
